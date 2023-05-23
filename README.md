@@ -1,6 +1,26 @@
 # newsscraper
 The newsscraper wich scrapes your daily news.
 
+# create a venv
+
+1. Once you are in the correct directory, run the following command to create a virtual environment:
+
+"python -m venv venv"
+
+2. This command creates a virtual environment named venv in your project directory.
+
+3. To activate the virtual environment, run the appropriate activation command based on your operating system
+
+"venv\Scripts\activate"
+
+4. Once the virtual environment is activated, you should see (venv) at the beginning of the terminal prompt.
+
+5. Now, you can install the necessary packages and dependencies specific to your project within the virtual environment using the pip command.
+
+6. For example, to install Flask, you can run:
+
+"pip install flask"
+
 # local run process
 1. Open Visual Studio Code.
 
@@ -12,13 +32,9 @@ The newsscraper wich scrapes your daily news.
 
 5. Activate the virtual environment (if you are using one) by running the appropriate activation command. For example, if you are using venv, you can activate it with the following command:
 
-"bash"
-
-"source venv/bin/activate"
+"venv/bin/activate"
 
 6. Once you are in the correct directory and the virtual environment (if any) is activated, run the Flask app with the following command:
-
-"bash"
 
 "flask run"
 
