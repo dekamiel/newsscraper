@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Newsscraper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>The Daily Newsscraper from every newspaper</h1>
+    <form id="urlForm">
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" required>
+        <button type="submit">Scrape</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        document.getElementById("urlForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var url = document.getElementById("urlInput").value;
+            scrape(url);
+        });
+
+        function scrape(url) {
+            fetch('/scrape?url=' + encodeURIComponent(url))
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').innerHTML = data;
+                });
+        }
+    </script>
+</body>
+
+</html>
